@@ -1,5 +1,3 @@
-import sys
-from unittest import runner
 import requests
 import unittest
 
@@ -10,6 +8,7 @@ class GetEventListTest(unittest.TestCase):
 
     # 发布会id为空
     def test_get_event_null(self):
+        u'发布会id为空'
         r = requests.get(self.url, params={"eid": ""})
         result = r.json()
         self.assertEqual(result["status"], 10021)
@@ -17,6 +16,7 @@ class GetEventListTest(unittest.TestCase):
 
     # 发布会id不存在
     def test_get_event_error(self):
+        u'发布会id不存在'
         r = requests.get(self.url, params={"eid": "1000"})
         result = r.json()
         self.assertEqual(result["status"], 10022)
@@ -24,6 +24,7 @@ class GetEventListTest(unittest.TestCase):
 
     # 发布会id为1,查询成功
     def test_get_event_success(self):
+        u'发布会id为1,查询成功'
         r = requests.get(self.url, params={"eid": "1"})
         result = r.json()
         self.assertEqual(result["status"], 200)
