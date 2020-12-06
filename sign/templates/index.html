@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Django Page</title>
+</head>
+<body>
+    <h1>发布会管理</h1>
+    <form method="POST" action="/login_action/">
+        <div>
+            <div>
+                <input name="uid" type="text" placeholder="username">
+            </div>
+            <br />
+            <div>
+                <input name="pwd" type="password" placeholder="password">
+            </div>
+            <br />
+        </div>
+        {{ error }}
+        <br />
+        <br />
+        <button id="btn" type="submit">登陆</button>
+        <!-- {% csrf_token %} -->
+    </form>
+</body>
+</html>
