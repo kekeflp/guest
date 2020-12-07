@@ -24,7 +24,8 @@ SECRET_KEY = 'age@7s9(1sq@s)5#!pn)xv=3bojn14io&5s_lv7t&sy!g-dzu6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# 允许所有主机IP访问
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
